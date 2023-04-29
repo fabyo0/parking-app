@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\V1\Auth\PasswordUpdateController;
 use App\Http\Controllers\Api\V1\Auth\ProfileController;
 use App\Http\Controllers\Api\V1\Auth\RegisterController;
 use App\Http\Controllers\Api\V1\VehicleController;
+use App\Http\Controllers\Api\V1\ZoneController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +34,7 @@ Route::middleware('auth:sanctum')->group(function () {
     // Vehicle
     Route::apiResource('vehicles', VehicleController::class);
 
+    //Zones
+
+    Route::get('zones', [ZoneController::class, 'index']);
 });
