@@ -5,6 +5,9 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Vehicle;
 use App\Observers\VehicleObserver;
+use App\Observers\ParkingObserver;
+use App\Models\Parking;
+
 
 
 class AppServiceProvider extends ServiceProvider
@@ -23,5 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Vehicle::observe(VehicleObserver::class);
+        Parking::observe(ParkingObserver::class);
+
     }
 }
