@@ -40,4 +40,6 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Parking - Start/Stop
     Route::post('parkings/start', [ParkingController::class, 'start']);
+    Route::get('parkings/{parking}', [ParkingController::class, 'show']);
+
 });
