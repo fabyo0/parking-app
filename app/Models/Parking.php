@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Builder;
+
 
 class Parking extends Model
 {
@@ -37,7 +39,7 @@ class Parking extends Model
         return $query->whereNotNull('stop_time');
     }
 
-    public static function boot()
+    protected static function booted(): void
     {
         static::addGlobalScope('user', function (Builder $builder) {
             $builder->where('user_id', auth()->id());

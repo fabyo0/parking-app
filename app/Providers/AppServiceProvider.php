@@ -2,12 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Parking;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Vehicle;
 use App\Observers\VehicleObserver;
 use App\Observers\ParkingObserver;
-use App\Models\Parking;
-
 
 
 class AppServiceProvider extends ServiceProvider
