@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 use App\Http\Resources\ParkingResource;
 use Illuminate\Http\Response;
 
+/**
+ * @group Auth
+ */
 
 class ParkingController extends Controller
 {

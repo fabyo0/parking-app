@@ -87,7 +87,7 @@ return [
                      * API calls will be made only for routes in this group matching these HTTP methods (GET, POST, etc).
                      * List the methods here or use '*' to mean all methods. Leave empty to disable API calls.
                      */
-                    'methods' => ['GET'],
+                    'methods' => [],
 
                     /*
                      * Laravel config variables which should be set for the API call.
@@ -228,7 +228,7 @@ return [
         /*
          * The name of the auth parameter (eg token, key, apiKey) or header (eg Authorization, Api-Key).
          */
-        'name' => 'key',
+        'name' => 'token',
 
         /*
          * The value of the parameter to be used by Scribe to authenticate response calls.
@@ -241,7 +241,7 @@ return [
          * Placeholder your users will see for the auth parameter in the example requests.
          * Set this to null if you want Scribe to use a random value as placeholder instead.
          */
-        'placeholder' => '{YOUR_AUTH_KEY}',
+        'placeholder' => '17|NhBHGMVaN3r1MUqmD484YpFxVBdmlI32NhVN02FH',
 
         /*
          * Any extra authentication-related info for your users. For instance, you can describe how to find or generate their auth credentials.

@@ -9,6 +9,9 @@ use App\Http\Resources\VehicleResource;
 use Illuminate\Http\Response;
 use App\Http\Requests\StoreVehicleRequest;
 
+/**
+ * @group Auth
+ */
 
 class VehicleController extends Controller
 {
